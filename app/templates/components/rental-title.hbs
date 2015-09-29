@@ -1,4 +1,4 @@
-<li>{{rental.owner}}'s {{rental.type}} in {{rental.city}}
+<li>{{#link-to 'rental' rental.id}} {{rental.owner}}'s {{rental.type}} in {{rental.city}} {{/link-to}}
 
   {{#if isImageShowing }}
     <p><img src = {{rental.image}} alt = {{rental.type}} {{action 'imageHide'}}></p>
@@ -6,6 +6,7 @@
     <button {{action 'imageShow'}}>Show image</button>
     <!-- <button {{action 'imageHide'}}>Hide image</button> -->
   {{/if}}
-  <button {{action 'delete' rental}}>Delete</button>
+  <!-- {{update-rental rental=rental update="update"}}
+  <button {{action 'delete' rental}}>Delete</button> -->
 
 </li>
